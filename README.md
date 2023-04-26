@@ -58,3 +58,19 @@ git push -u origin master // 本地库所有内容均保存至远程库
 删除远程仓库：
 1. git remote -v  // 查看远程库信息
 2. git remote rm origin // 此处的“删除”其实是解除了本地和远程的绑定关系. 若真删需要github上来操作
+### 分支
+- 查看分支：git branch
+- 创建分支：git branch <name>
+- 切换分支：git checkout <name>或者git switch <name>
+- 创建+切换分支：git checkout -b <name>或者git switch -c <name>
+- 合并某分支到当前分支：git merge <name>
+- 删除分支：git branch -d <name>
+
+### 标签
+命令git tag <tagname>用于新建一个标签，默认为HEAD，也可以指定一个commit id；
+命令git tag -a <tagname> -m "blablabla..."可以指定标签信息；
+命令git tag可以查看所有标签。
+命令git push origin <tagname>可以推送一个本地标签；
+命令git push origin --tags可以推送全部未推送过的本地标签；
+命令git tag -d <tagname>可以删除一个本地标签；
+命令git push origin :refs/tags/<tagname>可以删除一个远程标签
