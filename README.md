@@ -47,7 +47,14 @@ https://blog.csdn.net/mukes/article/details/115693833
 10. 恢复文件：git checkout -- <file>其实是用版本库里的版本替换工作区的版本，无论工作区是修改还是删除，都可以“一键还原”。
 
 ### 远程仓库
-1. git 生成 ssh 密钥
+1. 本地git 生成 ssh 密钥
 2. 找到密钥添加到github
+3. github新建远程仓库
 具体方法参照https://www.liaoxuefeng.com/wiki/896043488029600
+绑定远程库：git remote add origin git@github.com:Liuzq21/<repo>.git // 远程库的名字叫origin， Liuzq21下的repo.git远程仓库
+git push -u origin master // 本地库所有内容均保存至远程库
+4. 推送git push origin master // 把本地master分支的最新修改推送至GitHub
 
+删除远程仓库：
+1. git remote -v  // 查看远程库信息
+2. git remote rm origin // 此处的“删除”其实是解除了本地和远程的绑定关系. 若真删需要github上来操作
