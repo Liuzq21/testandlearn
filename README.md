@@ -74,3 +74,9 @@ git push -u origin master // 本地库所有内容均保存至远程库
 命令git push origin --tags可以推送全部未推送过的本地标签；
 命令git tag -d <tagname>可以删除一个本地标签；
 命令git push origin :refs/tags/<tagname>可以删除一个远程标签
+
+### Git 拉取远程master更新本地Liu 操作
+git checkout master
+git pull origin master
+git checkout Liu
+git merge master
